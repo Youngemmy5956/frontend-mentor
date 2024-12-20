@@ -1,0 +1,181 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    background: white;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    gap: 60px;
+    position: sticky;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth {
+    margin-left: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.auth a {
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.register {
+    border: 1.5px solid hsl(0, 0%, 41%);
+    padding: 13px 23px;
+    border-radius: 14px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    gap: 130px;
+}
+
+.content {
+    flex: 1;
+    max-width: 540px;
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 1.1;
+    margin-bottom: 48px;
+    color: hsl(0, 0%, 8%);
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 50px;
+    max-width: 445px;
+}
+
+.learn-more {
+    background: hsl(0, 0%, 8%);
+    color: white;
+    text-decoration: none;
+    padding: 15px 32px;
+    border-radius: 15px;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 108px;
+}
+
+.clients {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    opacity: 0.5;
+}
+
+.geometric-art {
+    flex: 1;
+    position: relative;
+    height: 920px;
+}
+
+.purple-arc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    background: #7666EC;
+    border-radius: 100px 100px 0 0;
+}
+
+.yellow-circle {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 280px;
+    height: 280px;
+    background: #FFD84F;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle-outline {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blue-triangle {
+    position: absolute;
+    left: 120px;
+    top: 240px;
+    width: 140px;
+    height: 140px;
+    background: #78C6F7;
+    transform: rotate(45deg);
+}
+
+.purple-square {
+    position: absolute;
+    bottom: 160px;
+    left: 80px;
+    width: 100px;
+    height: 100px;
+    background: #7666EC;
+}
+
+.bottom-shape {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 60px 60px 0 0;
+}
+
+.client-logo {
+    height: 20px;
+    object-fit: contain;
+}
+
+.client-logo.audiophile {
+    height: 36px;
+}
