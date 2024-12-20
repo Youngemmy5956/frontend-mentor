@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make remote work</title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="logo">snap</div>
+        <button class="menu-btn">☰</button>
         <div class="nav-menu">
             <a href="#">Features ▾</a>
             <a href="#">Company ▾</a>
@@ -36,11 +37,37 @@
         </div>
 
         <div class="geometric-art">
-     
-                <img src="image-hero-desktop.png" alt="Person with laptop" style="width: 100%; height: 100%; object-fit: cover;">
-            
-        
+            <img src="image-hero-desktop.png" alt="Person with laptop" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
     </main>
+
+    <script>
+        // Get DOM elements
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        const auth = document.querySelector('.auth');
+
+        // Toggle menu when hamburger is clicked
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            auth.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+                auth.classList.remove('active');
+            }
+        });
+
+        // Close menu when window is resized to desktop size
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('active');
+                auth.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

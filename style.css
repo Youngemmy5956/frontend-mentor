@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,8 @@ body {
     background: white;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
+    overflow-x: hidden;
 }
 
 nav {
@@ -18,7 +18,7 @@ nav {
     align-items: center;
     padding: 25px 0;
     gap: 60px;
-    position: sticky;
+    position: relative;
 }
 
 .logo {
@@ -109,68 +109,6 @@ h1 {
     height: 920px;
 }
 
-.purple-arc {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    background: #7666EC;
-    border-radius: 100px 100px 0 0;
-}
-
-.yellow-circle {
-    position: absolute;
-    top: 80px;
-    right: 40px;
-    width: 280px;
-    height: 280px;
-    background: #FFD84F;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.circle-outline {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border: 2px solid black;
-    border-radius: 50%;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.blue-triangle {
-    position: absolute;
-    left: 120px;
-    top: 240px;
-    width: 140px;
-    height: 140px;
-    background: #78C6F7;
-    transform: rotate(45deg);
-}
-
-.purple-square {
-    position: absolute;
-    bottom: 160px;
-    left: 80px;
-    width: 100px;
-    height: 100px;
-    background: #7666EC;
-}
-
-.bottom-shape {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 60px;
-    border: 2px solid black;
-    border-radius: 60px 60px 0 0;
-}
-
 .client-logo {
     height: 20px;
     object-fit: contain;
@@ -178,4 +116,161 @@ h1 {
 
 .client-logo.audiophile {
     height: 36px;
+}
+
+/* Hamburger menu for mobile */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    body {
+        padding: 0 30px;
+    }
+
+    nav {
+        gap: 30px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    main {
+        gap: 60px;
+        padding: 30px 0;
+    }
+
+    .content {
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+
+    .geometric-art {
+        height: 700px;
+    }
+
+    .clients {
+        gap: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    nav {
+        padding: 20px 0;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-menu, .auth {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        gap: 50px;
+        padding: 20px 0;
+    }
+
+    .content {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    .learn-more {
+        margin-bottom: 50px;
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .clients {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .geometric-art {
+        height: auto;
+        width: 100%;
+    }
+
+    .geometric-art img {
+        height: auto;
+    }
+
+    .client-logo {
+        height: 16px;
+    }
+
+    .client-logo.audiophile {
+        height: 30px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .clients {
+        gap: 20px;
+    }
+
+    .client-logo {
+        height: 14px;
+    }
+
+    .client-logo.audiophile {
+        height: 26px;
+    }
 }
